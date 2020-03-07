@@ -12,6 +12,7 @@
         <module>order-service</module>
         <module>api-commons</module>
         <module>eureka-server</module>
+        <module>admin-server</module>
     </modules>
     <packaging>pom</packaging>
 
