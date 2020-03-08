@@ -1,0 +1,33 @@
+server:
+  port: 9900
+spring:
+  application:
+    name: admin-service
+  mail:
+    host: smtp.163.com
+    username: 15962847050@163.com
+    password: 05CF779B2031EFC5
+    default-encoding: utf-8
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          ssl:
+#            enable: true
+#          starttls:
+#            enable: true
+#            required: true
+#    protocol: smtp
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 348068347@qq.com
+          enabled: true
+          from: 15962847050@163.com
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka

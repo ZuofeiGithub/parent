@@ -11,21 +11,25 @@ spring:
     url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
+  boot:
+    admin:
+      client:
+        url: http://localhost:9900
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.zuofei.springcloud.entities
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://localhost:7001/eureka
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    prefer-ip-address: true
+
 management:
   endpoints:
     web:
       exposure:
-        exclude: '*'
-  endpoint:
-    health:
-      show-details: always
+        include: '*'
