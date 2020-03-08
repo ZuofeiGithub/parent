@@ -14,17 +14,22 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:9900
+        url: http://localhost:9900/monitor
+        username: root
+        password: root
+        instance:
+          service-base-url: http://localhost:8001
+          name: 支付服务
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.zuofei.springcloud.entities
 eureka:
   client:
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://localhost:7001/eureka
-    register-with-eureka: false
-    fetch-registry: false
   instance:
     prefer-ip-address: true
 
@@ -33,3 +38,6 @@ management:
     web:
       exposure:
         include: '*'
+  endpoint:
+    health:
+      show-details: always
