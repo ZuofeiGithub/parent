@@ -48,5 +48,5 @@ management:
 logging:
   level:
     root: info
-    com.zuofei.springcloud: debug
-  config: log/blog.log
+    com.zuofei.springcloud: info
+#  config: log/blog.log

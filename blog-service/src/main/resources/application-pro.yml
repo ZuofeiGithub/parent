@@ -25,7 +25,7 @@ spring:
     mode: HTML
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
 
 eureka:
@@ -47,6 +47,6 @@ management:
       show-details: always
 logging:
   level:
-    root: info
-    com.zuofei.springcloud: debug
+    root: warn
+    com.zuofei.springcloud: info
   config: log/blog.log
